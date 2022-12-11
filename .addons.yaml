@@ -3,4 +3,5 @@ channel: stable
 addons:
   cybroscgiserver:
     repository: killer0071234/ha-addon-cybroscgiserver
+    image: docker.io/killer007/hassiocybroscgiserver
     target: cybroscgiserver
