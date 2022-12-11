@@ -1,0 +1,6 @@
+---
+channel: stable
+addons:
+  cybroscgiserver:
+    repository: killer0071234/ha-addon-cybroscgiserver
+    target: cybroscgiserver
