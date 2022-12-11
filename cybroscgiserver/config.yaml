@@ -1,0 +1,29 @@
+---
+version: dev
+slug: cybroscgiserver
+name: CybroScgiServer
+description: SCGI serer to communicate to PLCs from Cybrotech / Robotina
+url: https://github.com/killer0071234/hassio-cybroscgiserver
+codenotary: killer007@gmx.at
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  configuration_file: /config/cybroscgiserver/config.ini
+schema:
+  configuration_file: str
+  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+ports:
+  80/tcp: 8480
+  4000/tcp: null
+  8442/udp: 8442
+ports_description:
+  80/tcp: SCGI Web interface
+  4000/tcp: Direct SCGI web port (without http-headers)
+  8442/udp: Abus push port
+map:
+  - config:rw
