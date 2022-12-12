@@ -6,7 +6,7 @@ description: SCGI serer to communicate to PLCs from Cybrotech / Robotina
 url: https://github.com/killer0071234/hassio-cybroscgiserver
 codenotary: killer007@gmx.at
 init: false
-image: docker.io/killer007/hassiocybroscgiserver
+image: docker.io/killer007/cybroscgiserver
 arch:
   - aarch64
   - amd64
