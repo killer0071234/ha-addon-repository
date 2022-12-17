@@ -1,0 +1,10 @@
+#!/command/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: CybroScgiServer
+# Runs CybroScgiServer
+# ==============================================================================
+bashio::log.info "Copying config.ini file.."
+exec cp "$(bashio::config 'configuration_file')" /usr/local/bin/scgi_server/
+bashio::log.info "Starting CybroScgiServer..."
+exec cd /usr/local/bin/scgi_server/src
+exec python3 app.py "$(bashio::config 'configuration_file')"
