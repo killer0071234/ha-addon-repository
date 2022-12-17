@@ -1,8 +1,6 @@
-# Home Assistant Add-on: ebusd
+# Home Assistant Add-on: cybroscgiserver
 
-This add-on creates a supervisor add-on to run [ebusd](http://ebusd.eu). Configure ebusd comandline arguments using configuration options.
-
-Use ebusd's built-in MQTT client and the [mosquitto](https://github.com/home-assistant/addons/tree/master/mosquitto) add-on to get data from ebusd into Home Assistant core.
+This add-on creates a supervisor add-on to run cybroscgiserver from [cybrotech](https://cybrotech.com/). Configure cybroscgiserver config.ini file in config folder.
 
 See [repository readme](https://github.com/killer0071234/ha-addon-repository#how-to-install) on how to install cybro addon in supervisor.
 

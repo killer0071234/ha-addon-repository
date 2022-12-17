@@ -18,7 +18,7 @@ schema:
   configuration_file: str
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
 ports:
-  80/tcp: 8480
+  80/tcp: 8442
   4000/tcp: null
   8442/udp: 8442
 ports_description:

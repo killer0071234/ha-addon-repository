@@ -13,6 +13,6 @@ Created by @killer0071234.
 5. Install cybro scgi server. PLEASE NOTE: cybro scgi server Edge is untested and may be broken.
 6. Follow Documentation, Setup and Install of the Add-on
 
-## [ebusd](https://github.com/killer0071234/ha-addon-repository/tree/main/cybroscgiserver)
+## [cybroscgiserver](https://github.com/killer0071234/ha-addon-repository/tree/main/cybroscgiserver)
 
 Communication gateway between Home Assistant and cybro PLCs.
