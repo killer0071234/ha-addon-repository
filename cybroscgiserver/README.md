@@ -10,7 +10,7 @@ See [repository readme](https://github.com/killer0071234/ha-addon-repository#how
 
 - via Issues and pull requests in the Github repository
 
-*Not actually tested on any of these architectures*
+_Not actually tested on any of these architectures_
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
 ![Supports armhf Architecture][armhf-shield]
