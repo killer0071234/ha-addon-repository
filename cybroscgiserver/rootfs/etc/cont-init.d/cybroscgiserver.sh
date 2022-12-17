@@ -19,4 +19,8 @@ if ! bashio::fs.file_exists "${configuration_file}"; then
     bashio::log.fatal "Please add your controller at the end."
     bashio::log.fatal
     bashio::exit.nok
+else
+    bashio::log.info "Using existing configuration file:"
+    bashio::log.info "${configuration_file}"
+    bashio::exit.ok
 fi
