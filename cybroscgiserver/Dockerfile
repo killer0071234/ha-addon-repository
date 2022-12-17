@@ -24,6 +24,7 @@ RUN \
         py3-cryptography=3.4.8-r1 \
         py3-pip=22.1.1-r0 \
         python3=3.10.9-r0 \
+        nginx=1.22.1-r0 \
     \
     && pip install -r /tmp/requirements.txt \
     \
@@ -34,9 +35,13 @@ RUN \
     \
     && apk del --no-cache --purge .build-dependencies
 
-
 # Copy root filesystem
 COPY rootfs /
+
+# do post modifications
+RUN mkdir /usr/local/bin/scgi_server/log \
+    && touch /usr/local/bin/scgi_server/log/scgi.log \
+    && ln -sf /dev/stdout /usr/local/bin/scgi_server/log/scgi.log
 
 # Build arguments
 ARG BUILD_ARCH
@@ -57,8 +62,8 @@ LABEL \
     maintainer="Daniel Gangl <killer007@gmx.at>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
-    org.opencontainers.image.authors="Franck Nijhof <frenck@addons.community>" \
+    org.opencontainers.image.vendor="Home Assistant Daniel's Add-ons" \
+    org.opencontainers.image.authors="Daniel Gangl <killer007@gmx.at>" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.url="https://addons.community" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \

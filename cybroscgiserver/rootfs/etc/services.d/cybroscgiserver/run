@@ -3,8 +3,10 @@
 # Home Assistant Community Add-on: CybroScgiServer
 # Runs CybroScgiServer
 # ==============================================================================
-bashio::log.info "Copying config.ini file.."
+bashio::log.info "Copying config.ini file.. $(bashio::config 'configuration_file')"
 cp "$(bashio::config 'configuration_file')" /usr/local/bin/scgi_server/
+bashio::log.info "Starting nginx server..."
+nginx
 bashio::log.info "Starting CybroScgiServer..."
 cd /usr/local/bin/scgi_server/src
 exec python3 app.py
