@@ -14,7 +14,7 @@ class AbusExchanger:
 
         # sequence of (request, future) tuples where future will be resolved with future
         # response or error
-        self._requests_queue = asyncio.Queue(loop=self._communication_loop)
+        self._requests_queue = asyncio.Queue()
 
         # holds exchange tag of the most recently sent request. It has to be remembered throughout
         # the read cycle so it can be compared with responses' exchange tags
