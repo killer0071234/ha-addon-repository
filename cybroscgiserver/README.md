@@ -1,6 +1,6 @@
 # Home Assistant Add-on: cybroscgiserver
 
-This add-on creates a supervisor add-on to run cybroscgiserver from [cybrotech](https://cybrotech.com/). Configure cybroscgiserver config.ini file in config folder.
+This add-on creates a supervisor add-on to run cybroscgiserver v3.1.3 from [cybrotech](https://cybrotech.com/). Configure cybroscgiserver config.ini file in config folder.
 
 See [repository readme](https://github.com/killer0071234/ha-addon-repository#how-to-install) on how to install cybro addon in supervisor.
 
