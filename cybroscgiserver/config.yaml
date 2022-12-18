@@ -1,5 +1,5 @@
 ---
-version: 0.1.0
+version: dev
 slug: cybroscgiserver
 name: CybroScgiServer
 description: SCGI serer to communicate to PLCs from Cybrotech / Robotina
