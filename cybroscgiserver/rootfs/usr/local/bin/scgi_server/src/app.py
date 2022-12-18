@@ -65,7 +65,8 @@ if __name__ == "__main__":
     communication_loop, kill_communication_loop = create_thread_loop("CommunicationThread")
 
     try:
-        main_loop = asyncio.get_event_loop()
+        main_loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(main_loop)
         main_loop.create_task(_main(communication_loop))
         main_loop.run_forever()
     except KeyboardInterrupt as exception:

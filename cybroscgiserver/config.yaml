@@ -18,12 +18,12 @@ schema:
   configuration_file: str
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
 ports:
-  80/tcp: 8442
-  4000/tcp: null
+  80/tcp: null
+  4000/tcp: 4000
   8442/udp: 8442
 ports_description:
-  80/tcp: SCGI Web interface
-  4000/tcp: Direct SCGI web port (without http-headers)
+  80/tcp: SCGI Web interface (with nginx as proxy)
+  4000/tcp: SCGI port (Used for Integrations. eg. ha-hiq)
   8442/udp: Abus push port
 map:
   - config:rw
