@@ -16,8 +16,8 @@ on:
         description: Overrides the detected slug
         required: false
         type: string
-        
-# original code source: https://github.com/hassio-addons/workflows/blob/main/.github/workflows/addon-ci.yaml
+# original code source
+# https://github.com/hassio-addons/workflows/blob/main/.github/workflows/addon-ci.yaml
 jobs:
   information:
     name: Gather add-on information
