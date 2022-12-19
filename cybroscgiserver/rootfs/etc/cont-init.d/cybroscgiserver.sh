@@ -8,7 +8,7 @@ declare configuration_file
 
 configuration_file=$(bashio::config 'configuration_file')
 if ! bashio::fs.file_exists "${configuration_file}"; then
-    cp "$(bashio::config 'configuration_file')" /usr/local/bin/scgi_server/
+    cp /usr/local/bin/scgi_server/config.ini "$(bashio::config 'configuration_file')" 
     bashio::log.fatal
     bashio::log.fatal "Seems like the configured configuration file does"
     bashio::log.fatal "not exists:"
