@@ -52,8 +52,8 @@ jobs:
     steps:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v3
-      - name: 🚀 Run Add-on Lint
-        uses: frenck/action-addon-linter@v2.13.1
+      - name: 🚀 Run Home Assistant Add-on Lint
+        uses: frenck/action-addon-linter@v2
         with:
           community: false
           path: "./${{ needs.information.outputs.target }}"
