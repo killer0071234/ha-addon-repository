@@ -2,6 +2,14 @@
 
 # Changelog
 
+## [0.1.3] - 2023-09-28
+
+- bump ghcr.io/hassio-addons/base from 14.0.2 to 14.1.3
+
+### Fixed
+
+- docker build for outdated dependencies
+
 ## [0.1.2] - 2023-07-05
 
 - bump ghcr.io/hassio-addons/base from 12.2.7 to 14.0.2
