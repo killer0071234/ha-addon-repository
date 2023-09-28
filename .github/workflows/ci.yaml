@@ -32,7 +32,7 @@ jobs:
       target: ${{ steps.information.outputs.target }}
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run add-on information action
         id: information
         uses: frenck/action-addon-information@v1.4.1
@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run Home Assistant Add-on Lint
         uses: frenck/action-addon-linter@v2
         with:
@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run Hadolint
         uses: brpaz/hadolint-action@v1.5.0
         with:
@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run JQ
         run: |
           shopt -s globstar
@@ -86,7 +86,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run Shellcheck
         uses: ludeeus/action-shellcheck@1.1.0
         env:
@@ -97,7 +97,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run YAMLLint
         uses: frenck/action-yamllint@v1.3
 
@@ -106,7 +106,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🚀 Run Prettier
         uses: creyD/prettier_action@v4.3
         with:
@@ -130,7 +130,7 @@ jobs:
         architecture: ${{ fromJson(needs.information.outputs.architectures) }}
     steps:
       - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🏗 Set up build cache
         id: cache
         uses: actions/cache@v3.0.11
