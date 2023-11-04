@@ -2,6 +2,10 @@
 
 # Changelog
 
+## [0.1.4] - 2023-11-04
+
+- bump ghcr.io/hassio-addons/base from 14.1.3 to 14.3.1
+
 ## [0.1.3] - 2023-09-28
 
 - bump ghcr.io/hassio-addons/base from 14.0.2 to 14.1.3
