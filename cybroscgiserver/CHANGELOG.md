@@ -2,6 +2,13 @@
 
 # Changelog
 
+## [0.2.0] - 2023-11-05
+
+- added autodetect feature of controller in local network (config parameter need to set to broadcast ip address)
+- added config parameter for data cache
+- improved addo documentation
+- removed ngingx proxy server
+
 ## [0.1.4] - 2023-11-04
 
 - bump ghcr.io/hassio-addons/base from 14.1.3 to 14.3.1
