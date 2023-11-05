@@ -1,9 +1,9 @@
 ---
-version: 0.1.4
+version: 0.2.0
 slug: cybroscgiserver
 name: CybroScgiServer
 description: SCGI serer to communicate to PLCs from Cybrotech / Robotina
-url: https://github.com/killer0071234/hassio-cybroscgiserver
+url: https://github.com/killer0071234/ha-addon-repository/tree/main/cybroscgiserver
 codenotary: killer007@gmx.at
 init: false
 arch:
@@ -14,16 +14,20 @@ arch:
   - i386
 options:
   configuration_file: /config/cybroscgiserver_config.ini
+  autodetect_address: 192.168.1.255
+  request_period_s: 5
+  valid_period_s: 10
+  cleanup_period_s: 60
 schema:
   configuration_file: str
-  log_level: list(trace|debug|info|notice|warning|error|fatal)?
+  autodetect_address: str
+  request_period_s: int(0,60)
+  valid_period_s: int(0,60)
+  cleanup_period_s: int(0,300)
+  verbose_level: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?
 ports:
-  80/tcp: null
   4000/tcp: 4000
   8442/udp: 8442
-ports_description:
-  80/tcp: SCGI Web interface (with nginx as proxy)
-  4000/tcp: SCGI port (Used for Integrations. eg. ha-hiq)
-  8442/udp: Abus push port
 map:
   - config:rw
+host_network: true
