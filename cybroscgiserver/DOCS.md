@@ -17,7 +17,6 @@ comparison to installing any other Home Assistant add-on.
 1. Start the "CybroScgiServer" add-on
 1. Check the logs of the "CybroScgiServer" add-on to see if everything went well.
 
-
 ## Configuration
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
