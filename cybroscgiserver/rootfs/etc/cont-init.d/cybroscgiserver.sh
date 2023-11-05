@@ -26,7 +26,7 @@ if ! bashio::fs.file_exists "${configuration_file}"; then
     bashio::exit.nok
 else
     bashio::log.info "Using existing configuration file: ${configuration_file}"
-    cp $configuration_file /usr/local/bin/scgi_server/config.ini
+    cp "$(bashio::config 'configuration_file')" /usr/local/bin/scgi_server/config.ini
 
     if bashio::config.has_value "autodetect_address"; then autodetect_address=$(bashio::config 'autodetect_address'); else autodetect_address=""; fi
     if [ "$autodetect_address" != "" ]; then
@@ -54,6 +54,6 @@ else
     bashio::log.info "configured verbose_level: ${verbose_level}"
     sed -i "s/^verbose_level.*/verbose_level = $verbose_level/" /usr/local/bin/scgi_server/config.ini
 
-    cp /usr/local/bin/scgi_server/config.ini $configuration_file
+    cp /usr/local/bin/scgi_server/config.ini "$(bashio::config 'configuration_file')"
     bashio::exit.ok
 fi
