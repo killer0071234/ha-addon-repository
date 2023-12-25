@@ -1,5 +1,5 @@
 ---
-version: 0.2.0
+version: 0.2.1
 slug: cybroscgiserver
 name: CybroScgiServer
 description:
@@ -15,7 +15,7 @@ arch:
   - armv7
   - i386
 options:
-  configuration_file: /config/cybroscgiserver_config.ini
+  configuration_file: /homeassistant/cybroscgiserver_config.ini
   autodetect_address: 192.168.1.255
   request_period_s: 5
   valid_period_s: 10
@@ -32,4 +32,5 @@ ports:
   8442/udp: 8442
 map:
   - config:rw
+  - homeassistant:rw
 host_network: true
