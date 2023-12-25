@@ -3,8 +3,8 @@
 # Home Assistant Community Add-on: CybroScgiServer
 # Pre-run checks for CybroScgiServer
 # ==============================================================================
-# Creates initial CybroScgiServer configuration in case it is non-existing
 declare configuration_file
+declare ha_config_file
 declare autodetect_address
 declare request_period_s
 declare valid_period_s
@@ -12,6 +12,17 @@ declare cleanup_period_s
 declare verbose_level
 
 configuration_file=$(bashio::config 'configuration_file')
+# copy config from legacy config folder to addon config folder
+ha_config_file="${configuration_file/"/config"/"/homeassistant"}"
+if bashio::fs.file_exists "${ha_config_file}"; then
+    bashio::log.warning "Found addon config in:"
+    bashio::log.warning "${ha_config_file}"
+    bashio::log.warning
+    bashio::log.warning "move config into addon config folder:"
+    bashio::log.warning "${configuration_file}"
+    mv "${ha_config_file}" "${configuration_file}"
+fi
+# Creates initial CybroScgiServer configuration in case it is non-existing
 if ! bashio::fs.file_exists "${configuration_file}"; then
     cp /usr/local/bin/scgi_server/config.ini "$(bashio::config 'configuration_file')" 
     bashio::log.fatal
