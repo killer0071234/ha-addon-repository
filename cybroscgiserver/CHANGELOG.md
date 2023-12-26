@@ -2,6 +2,12 @@
 
 # Changelog
 
+## [0.2.1] - 2023-12-26
+
+- Use of new config folder homeassistant for ini file (#62) @killer0071234
+- Replace CI (#64) @killer0071234
+- Bump docker/build-push-action from 5.0.0 to 5.1.0 (#60) @dependabot
+
 ## [0.2.0] - 2023-11-05
 
 - added autodetect feature of controller in local network (config parameter need to set to broadcast ip address)
