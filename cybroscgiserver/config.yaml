@@ -1,5 +1,5 @@
 ---
-version: 0.2.0
+version: 0.2.1
 slug: cybroscgiserver
 name: CybroScgiServer
 description:
@@ -31,5 +31,6 @@ ports:
   4000/tcp: 4000
   8442/udp: 8442
 map:
-  - config:rw
+  - homeassistant_config:rw
+  - addon_config:rw
 host_network: true
