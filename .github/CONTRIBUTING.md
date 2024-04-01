@@ -25,5 +25,10 @@ Even better: You could submit a pull request with a fix / new feature!
    developers, or if you do not have permission to do that, you may request
    the second reviewer to merge it for you.
 
+## Build images locally
+
+To build the images locally use the following command:
+`docker run --rm -it --name builder --privileged -v /var/run/docker.sock:/var/run/docker.sock:ro -v ./cybroscgiserver:/data ghcr.io/home-assistant/amd64-builder:latest --all -t /data --all --test -i ghcr.io/killer0071234/cybroscgiserver-addon-{arch} -d local`
+
 [github]: https://github.com/ha-addon-repository/issues
 [prs]: https://github.com/ha-addon-repository/pulls
