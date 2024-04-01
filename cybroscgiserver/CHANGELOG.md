@@ -2,6 +2,11 @@
 
 # Changelog
 
+## [0.2.2] - 2024-01-04
+
+- Add repository to build config (#8) @killer0071234
+- Update complete repo to base 15.0.7 (#7) @killer0071234
+
 ## [0.2.1] - 2023-12-26
 
 - Use of new config folder homeassistant for ini file (#62) @killer0071234

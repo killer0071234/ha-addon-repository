@@ -35,3 +35,4 @@ map:
   - homeassistant_config:rw
   - addon_config:rw
 host_network: true
+image: ghcr.io/killer0071234/cybroscgiserver/{arch}
