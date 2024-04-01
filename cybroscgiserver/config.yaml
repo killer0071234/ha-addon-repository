@@ -6,7 +6,7 @@ name: CybroScgiServer
 description:
   SCGI serer to communicate to PLCs from Cybrotech / Robotina
   # yamllint disable-line rule:line-length
-url: https://github.com/killer0071234/ha-addon-repository/tree/main/cybroscgiserver
+url: https://github.com/killer0071234/hassio-cybroscgiserver
 codenotary: killer007@gmx.at
 init: false
 arch:
