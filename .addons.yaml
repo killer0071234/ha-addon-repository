@@ -3,5 +3,5 @@ channel: stable
 addons:
   cybroscgiserver:
     repository: killer0071234/addon-cybroscgiserver
-    image: ghcr.io/killer0071234/cybroscgiserver/{arch}
+    image: ghcr.io/killer0071234/cybroscgiserver-addon-{arch}
     target: cybroscgiserver
