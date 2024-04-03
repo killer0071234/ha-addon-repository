@@ -1,8 +1,0 @@
-#!/command/with-contenv bashio
-# ==============================================================================
-# Home Assistant Community Add-on: CybroScgiServer
-# Runs CybroScgiServer
-# ==============================================================================
-bashio::log.info "Starting CybroScgiServer v3.1.3..."
-cd /usr/local/bin/scgi_server/src
-exec python3 app.py
