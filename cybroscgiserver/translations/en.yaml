@@ -1,0 +1,27 @@
+---
+configuration:
+  configuration_file:
+    name: configuration file
+    description: configuration file to edit settings of scgi server
+  autodetect_address:
+    name: autodetect ip address
+    # yamllint disable-line rule:line-length
+    description: autodetect (broadcast) ip address in network (eg. ip 192.168.1.44 mask 255.255.255.0 -> detect address is 192.168.1.255)
+  request_period_s:
+    name: request period (sec)
+    # yamllint disable-line rule:line-length
+    description: time after data is still read from the cache, but a new read is sent to refresh the cache [s], 0 to disable refresh
+  valid_period_s:
+    name: valid period (sec)
+    # yamllint disable-line rule:line-length
+    description: time after cache is invalidated and data is read directly from the controller [s], 0 to disable cache
+  cleanup_period_s:
+    name: cleanup period (sec)
+    # yamllint disable-line rule:line-length
+    description: time to periodically remove expired cache items [s], 0 to disable cleanup
+  verbose_level:
+    name: verbose level log output
+    description: verbose level of log output
+network:
+  4000/tcp: SCGI port (Used for Integrations. eg. ha-hiq)
+  8442/udp: Abus push port
