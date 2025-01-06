@@ -21,50 +21,24 @@ comparison to installing any other Home Assistant add-on.
 
 **Note**: _Remember to restart the add-on when the configuration is changed._
 
-To add / change controllers edit the `cybroscgiserver_config.ini` file in your config folder.
-
-Example controller configuration entry for one controller (at the end of the file):
-
-```ini
-[c1000]
-ip = 192.168.0.10
-port = 8442
-password =
-```
-
-**Note**: _Even if you don't use password on the controller you need the empty entry `password =`._
-
-### Option: `configuration_file`
+### Option: `configuration_file` (required)
 
 This option allows you to specify the a specific name for the scgi server config file.
 If this file does not exist, it will be created during the first startup of that integration.
 The default name of that file is `cybroscgiserver_config.ini`.
 
-### Option: `autodetect_address`
+### Option: `autodetect_address` (optional)
 
-The `autodetect_address` option should be set to the broadcast address of the local network.
+The `autodetect_address` option is by default empty.
 autodetect (broadcast) ip address in network (eg. ip 192.168.1.33 mask 255.255.255.0 -> autodetect address is 192.168.1.255).
+Only nessesary if autodetect is not working.See section for manual controller configuration.
 
-### Option: `request_period_s`
+### Option: `push_enabled` (optional)
 
-`request_period_s` is an intermediate time, smaller than `valid_period_s`, in which
-value is still returned from cache, but read request is sent, and the answer is
-used to update the cache.
-The option is set in seconds.
+Enables or disables the builtin push server.
+Receive and acknowledge push messages sent by controllers
 
-### Option: `valid_period_s`
-
-`valid_period_s` defines cache validity time. When cache expires, read is
-performed directly from controller, waiting for the answer.
-The option is set in seconds.
-
-### Option: `cleanup_period_s`
-
-`cleanup_period_s` defines the period when invalidated items will be removed from
-cache.
-The option is set in seconds.
-
-### Option: `verbose_level`
+### Option: `verbose_level` (optional)
 
 The `verbose_level` option controls the level of log output by the addon and can
 be changed to be more or less verbose, which might be useful when you are
@@ -81,6 +55,21 @@ more severe level, e.g., `DEBUG` also shows `INFO` messages. By default,
 the `verbose_level` is set to `ERROR`, which is the recommended setting unless
 you are troubleshooting.
 These log level also affects the log levels of cybro scgi server.
+
+### Manual controller configuration (optional)
+
+To add a manual controller, edit the `cybroscgiserver_config.ini` file in your addon config folder.
+
+Example controller configuration entry for one controller (at the end of the file):
+
+```ini
+[c1000]
+ip = 192.168.0.10
+port = 8442
+password =
+```
+
+**Note**: _Even if you don't use password on the controller you need the empty entry `password =`._
 
 ## Known issues and limitations
 

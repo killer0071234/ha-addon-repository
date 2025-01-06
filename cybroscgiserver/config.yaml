@@ -1,4 +1,4 @@
-version: 0.2.3
+version: 0.2.4
 slug: cybroscgiserver
 name: CybroScgiServer
 description: SCGI serer to communicate to PLCs from Cybrotech / Robotina
@@ -13,16 +13,10 @@ arch:
 - i386
 options:
   configuration_file: /config/cybroscgiserver_config.ini
-  autodetect_address: 192.168.1.255
-  request_period_s: 5
-  valid_period_s: 10
-  cleanup_period_s: 60
 schema:
   configuration_file: str
-  autodetect_address: str
-  request_period_s: int(0,60)
-  valid_period_s: int(0,60)
-  cleanup_period_s: int(0,300)
+  autodetect_address: str?
+  push_enabled: bool?
   verbose_level: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?
 ports:
   4000/tcp: 4000

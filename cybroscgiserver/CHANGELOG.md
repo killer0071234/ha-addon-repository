@@ -1,16 +1,14 @@
 ## Changes
 
-## 👷 Continuous Integration
+## 🚀 Features
 
-* Update repo url (#10) @killer0071234
+* Update and simplified addon configuration (#18) @killer0071234
 
 ## 📚 Documentation
 
-* Update documentation (#12) @killer0071234
+* Update and simplified addon configuration (#18) @killer0071234
 
 ## 📦 Dependencies
 
-* Update requirements.txt file for scgi server (#15) @killer0071234
-* Add changelog for 0.2.3 (#14) @killer0071234
-* Update repo to base 16.3.2 (#13) @killer0071234
-* Add codenotary (#11) @killer0071234
+* Update repo to base 17.0.1 (#17) @killer0071234
+* Add devcontainer config (#16) @killer0071234
