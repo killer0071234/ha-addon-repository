@@ -1,17 +1,40 @@
 ---
 name: Repository Updater
+
 # yamllint disable-line rule:truthy
 on:
   repository_dispatch:
     types: ["update"]
+  workflow_dispatch:
+    inputs:
+      app:
+        description: Slug of the app to update (empty = all apps)
+        required: false
+      force:
+        description: Force repository update, even if no changes are detected
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: queue
+
 jobs:
   workflows:
-    name: Publish add-on update
+    name: Publish app update
     runs-on: ubuntu-latest
     steps:
       - name: 🚀 Run Repository Updater
-        uses: killer0071234/repository-updater@git-user-git-email
+        # Fork of hassio-addons/repository-updater that sets git user/email
+        uses: killer0071234/repository-updater@b2817b0c1f77c2c2449536689eb4b100cad1a2e6  # git-user-git-email
         with:
-          addon: ${{ github.event.client_payload.addon }}
+          # app-deploy >= v4 sends "app", older versions sent "addon"
+          addon: >-
+            ${{ github.event.client_payload.app
+            || github.event.client_payload.addon
+            || inputs.app }}
+          force: ${{ inputs.force || false }}
           repository: ${{ github.repository }}
           token: ${{ secrets.UPDATER_TOKEN }}
