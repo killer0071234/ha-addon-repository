@@ -1,6 +1,6 @@
 ---
 channel: stable
-addons:
+apps:
   cybroscgiserver:
     repository: killer0071234/hassio-cybroscgiserver
     image: ghcr.io/killer0071234/cybroscgiserver/{arch}
