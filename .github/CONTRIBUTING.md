@@ -25,10 +25,12 @@ Even better: You could submit a pull request with a fix / new feature!
    developers, or if you do not have permission to do that, you may request
    the second reviewer to merge it for you.
 
-## Build images locally
+## Apps
 
-To build the images locally use the following command:
-`docker run --rm -it --name builder --privileged -v /var/run/docker.sock:/var/run/docker.sock:ro -v ./cybroscgiserver:/data ghcr.io/home-assistant/amd64-builder:latest --all -t /data --all --test -i ghcr.io/killer0071234/cybroscgiserver-addon-{arch} -d local`
+The apps themselves are developed in separate repositories. This repository
+only holds the app store metadata, which is updated automatically when an app
+is released. Please open issues and pull requests for an app in its own
+repository (linked from the [README](../README.md)).
 
-[github]: https://github.com/ha-addon-repository/issues
-[prs]: https://github.com/ha-addon-repository/pulls
+[github]: https://github.com/killer0071234/ha-addon-repository/issues
+[prs]: https://github.com/killer0071234/ha-addon-repository/pulls
