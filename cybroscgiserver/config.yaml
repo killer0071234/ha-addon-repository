@@ -1,4 +1,4 @@
-version: 0.3.0
+version: 0.3.1
 slug: cybroscgiserver
 name: CybroScgiServer
 description: SCGI server to communicate to PLCs from Cybrotech / Robotina
@@ -8,15 +8,21 @@ arch:
 - aarch64
 - amd64
 options:
-  configuration_file: /config/cybroscgiserver_config.ini
+  controllers: []
 schema:
-  configuration_file: str
+  configuration_file: str?
   autodetect_address: str?
   push_enabled: bool?
   verbose_level: list(DEBUG|INFO|WARNING|ERROR|CRITICAL)?
+  controllers:
+  - nad: int(1,)
+    ip: str
+    port: port?
+    password: int?
 ports:
   4000/tcp: 4000
   8442/udp: 8442
+hassio_api: true
 map:
 - homeassistant_config:rw
 - addon_config:rw

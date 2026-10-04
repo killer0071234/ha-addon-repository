@@ -103,10 +103,10 @@ SOFTWARE.
 
 Code template was mainly from [hassio-repo][hassio-repo]
 
-[addon-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.3.0
-[addon-doc-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/blob/v0.3.0/README.md
+[addon-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.3.1
+[addon-doc-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/blob/v0.3.1/README.md
 [cybroscgiserver-issue]: https://github.com/killer0071234/hassio-cybroscgiserver/issues
-[cybroscgiserver-version-shield]: https://img.shields.io/badge/version-v0.3.0-blue.svg
+[cybroscgiserver-version-shield]: https://img.shields.io/badge/version-v0.3.1-blue.svg
 [cybroscgiserver-aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [cybroscgiserver-amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [cybroscgiserver-armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg

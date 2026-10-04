@@ -14,7 +14,7 @@ See ![repository readme][addon-repo-install] on how to install the cybro app in 
 
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
-[release-shield]: https://img.shields.io/badge/version-v0.3.0-blue.svg
-[release]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.3.0
+[release-shield]: https://img.shields.io/badge/version-v0.3.1-blue.svg
+[release]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.3.1
 [addon-repo-install]: https://github.com/killer0071234/ha-addon-repository#installation
 [cybrotech]: https://cybrotech.com/

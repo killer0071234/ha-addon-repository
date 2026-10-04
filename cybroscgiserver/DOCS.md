@@ -21,12 +21,6 @@ comparison to installing any other Home Assistant app.
 
 **Note**: _Remember to restart the app when the configuration is changed._
 
-### Option: `configuration_file` (required)
-
-This option allows you to specify the a specific name for the scgi server config file.
-If this file does not exist, it will be created during the first startup of that integration.
-The default name of that file is `cybroscgiserver_config.ini`.
-
 ### Option: `autodetect_address` (optional)
 
 The `autodetect_address` option is by default empty.
@@ -56,20 +50,33 @@ the `verbose_level` is set to `ERROR`, which is the recommended setting unless
 you are troubleshooting.
 These log level also affects the log levels of cybro scgi server.
 
-### Manual controller configuration (optional)
+### Option: `controllers` (optional)
 
-To add a manual controller, edit the `cybroscgiserver_config.ini` file in your app config folder.
+Controllers that are not found by autodetect can be added manually.
+Each entry has these fields:
 
-Example controller configuration entry for one controller (at the end of the file):
+- `nad` (required): serial number of the controller, e.g. `1000` for controller `c1000`.
+- `ip` (required): IP address of the controller.
+- `port` (optional): UDP port of the controller, by default `8442`.
+- `password` (optional): numeric password of the controller. Omit this field if the controller has no password.
 
-```ini
-[c1000]
-ip = 192.168.0.10
-port = 8442
-password =
+Example configuration for one controller:
+
+```yaml
+controllers:
+  - nad: 1000
+    ip: 192.168.0.10
 ```
 
-**Note**: _Even if you don't use password on the controller you need the empty entry `password =`._
+### Option: `configuration_file` (optional)
+
+Older versions of this app used a config file (by default
+`/config/cybroscgiserver_config.ini`) for manual controllers. If the `controllers`
+option is empty and this file is found on start, its controllers are imported into
+the `controllers` option and the file is renamed to `<file>.migrated`. Other settings in that file are
+not used anymore.
+
+**Note**: _This option is deprecated and will be removed in a future release._
 
 ## Troubleshooting
 
@@ -122,7 +129,7 @@ Autodetect uses a broadcast in your local network. If no controller is found:
 1. Set `autodetect_address` to the broadcast address of the network where the
    controllers are (e.g. `192.168.1.255`).
 1. If that doesn't help, add the controller manually, see
-   [Manual controller configuration](#manual-controller-configuration-optional).
+   [`controllers` option](#option-controllers-optional).
 
 ## Known issues and limitations
 
