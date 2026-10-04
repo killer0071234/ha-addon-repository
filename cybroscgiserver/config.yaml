@@ -1,16 +1,12 @@
-version: 0.2.4
+version: 0.3.0
 slug: cybroscgiserver
 name: CybroScgiServer
-description: SCGI serer to communicate to PLCs from Cybrotech / Robotina
+description: SCGI server to communicate to PLCs from Cybrotech / Robotina
 url: https://github.com/killer0071234/hassio-cybroscgiserver
-codenotary: killer007@gmx.at
 init: false
 arch:
 - aarch64
 - amd64
-- armhf
-- armv7
-- i386
 options:
   configuration_file: /config/cybroscgiserver_config.ini
 schema:
