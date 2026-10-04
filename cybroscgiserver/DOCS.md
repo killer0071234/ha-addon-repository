@@ -78,6 +78,20 @@ not used anymore.
 
 **Note**: _This option is deprecated and will be removed in a future release._
 
+## Status page
+
+Click **Open Web UI** on the app page (or enable **Show in sidebar**) to open a
+status page of the server. It shows:
+
+- the state of the server (`active`, or `unreachable` when the server doesn't
+  answer) and its uptime,
+- the version of the SCGI server and of the app,
+- the list of found controllers (autodetect, push and manual) with their status,
+  IP address, response time and communication errors. For controllers with
+  status `ok`, the **Variables** button lists their variables.
+
+The page refreshes every 5 seconds.
+
 ## Troubleshooting
 
 ### Check the log

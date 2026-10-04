@@ -1,4 +1,4 @@
-version: 0.3.1
+version: 0.3.2
 slug: cybroscgiserver
 name: CybroScgiServer
 description: SCGI server to communicate to PLCs from Cybrotech / Robotina
@@ -27,4 +27,8 @@ map:
 - homeassistant_config:rw
 - addon_config:rw
 host_network: true
+ingress: true
+ingress_port: 0
+panel_icon: mdi:lan-connect
+panel_title: CybroScgiServer
 image: ghcr.io/killer0071234/cybroscgiserver/{arch}
