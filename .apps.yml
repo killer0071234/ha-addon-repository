@@ -5,3 +5,7 @@ apps:
     repository: killer0071234/hassio-cybroscgiserver
     image: ghcr.io/killer0071234/cybroscgiserver/{arch}
     target: cybroscgiserver
+  cybroedgetoolkit:
+    repository: killer0071234/hassio-cybroedgetoolkit
+    image: ghcr.io/killer0071234/cybroedgetoolkit/{arch}
+    target: cybroedgetoolkit
