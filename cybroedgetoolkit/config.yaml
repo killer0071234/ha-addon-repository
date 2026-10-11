@@ -1,0 +1,33 @@
+name: Cybro Edge Toolkit
+version: 1.0.0
+slug: cybroedgetoolkit
+description: Cybrotech Cybro Edge Toolkit (SCGI server, MQTT client, data logger)
+  for Cybro PLCs
+url: https://github.com/killer0071234/hassio-cybroedgetoolkit/tree/main/cybroedgetoolkit
+arch:
+- aarch64
+- amd64
+init: false
+startup: services
+host_network: true
+ports:
+  4000/tcp: 4000
+  8442/udp: 8442
+ports_description:
+  4000/tcp: SCGI server (used by MQTT client, data logger and 3rd party clients)
+  8442/udp: Cybro controller communication (A-bus over UDP)
+map:
+- addon_config:rw
+services:
+- mqtt:want
+options:
+  scgi_server: true
+  mqtt_client: true
+  mqtt_auto_config: true
+  data_logger: false
+schema:
+  scgi_server: bool
+  mqtt_client: bool
+  mqtt_auto_config: bool
+  data_logger: bool
+image: ghcr.io/killer0071234/cybroedgetoolkit/{arch}

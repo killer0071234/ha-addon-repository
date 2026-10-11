@@ -22,6 +22,19 @@ https://github.com/killer0071234/ha-addon-repository
 
 ## Apps provided by this repository
 
+### &#10003; [Cybro Edge Toolkit][addon-cybroedgetoolkit]
+
+![Latest Version][cybroedgetoolkit-version-shield]
+![Supports armhf Architecture][cybroedgetoolkit-armhf-shield]
+![Supports armv7 Architecture][cybroedgetoolkit-armv7-shield]
+![Supports aarch64 Architecture][cybroedgetoolkit-aarch64-shield]
+![Supports amd64 Architecture][cybroedgetoolkit-amd64-shield]
+![Supports i386 Architecture][cybroedgetoolkit-i386-shield]
+
+Cybrotech Cybro Edge Toolkit (SCGI server, MQTT client, data logger) for Cybro PLCs
+
+[:books: Cybro Edge Toolkit app documentation][addon-doc-cybroedgetoolkit]
+
 ### &#10003; [CybroScgiServer][addon-cybroscgiserver]
 
 ![Latest Version][cybroscgiserver-version-shield]
@@ -53,6 +66,7 @@ You could open an issue here on GitHub. Note, we use a separate
 GitHub repository for each app. Please ensure you are creating the issue
 on the correct GitHub repository matching the app.
 
+- [Open an issue for the app: Cybro Edge Toolkit][cybroedgetoolkit-issue]
 - [Open an issue for the app: CybroScgiServer][cybroscgiserver-issue]
 
 For a general repository issue or app ideas [open an issue here][issue]
@@ -103,6 +117,15 @@ SOFTWARE.
 
 Code template was mainly from [hassio-repo][hassio-repo]
 
+[addon-cybroedgetoolkit]: https://github.com/killer0071234/hassio-cybroedgetoolkit/tree/v1.0.0
+[addon-doc-cybroedgetoolkit]: https://github.com/killer0071234/hassio-cybroedgetoolkit/blob/v1.0.0/README.md
+[cybroedgetoolkit-issue]: https://github.com/killer0071234/hassio-cybroedgetoolkit/issues
+[cybroedgetoolkit-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
+[cybroedgetoolkit-aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
+[cybroedgetoolkit-amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
+[cybroedgetoolkit-armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
+[cybroedgetoolkit-armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
+[cybroedgetoolkit-i386-shield]: https://img.shields.io/badge/i386-no-red.svg
 [addon-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.3.2
 [addon-doc-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/blob/v0.3.2/README.md
 [cybroscgiserver-issue]: https://github.com/killer0071234/hassio-cybroscgiserver/issues

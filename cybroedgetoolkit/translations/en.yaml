@@ -1,0 +1,26 @@
+---
+configuration:
+  scgi_server:
+    name: SCGI server
+    description: >-
+      Run the SCGI server, which communicates with the Cybro controllers.
+      Required by the MQTT client and data logger unless they use a remote
+      SCGI server.
+  mqtt_client:
+    name: MQTT client
+    description: Run the MQTT client, which publishes controller variables to an MQTT broker.
+  mqtt_auto_config:
+    name: Use Home Assistant MQTT broker
+    description: >-
+      Write the address and credentials of the Home Assistant MQTT broker
+      (e.g. the Mosquitto broker app) into the [MQTT] section of config.ini
+      on every start.
+  data_logger:
+    name: Data logger
+    description: >-
+      Run the data logger, which stores controller variables in a MySQL /
+      MariaDB database. Configure the [DBASE] section of config.ini and
+      data_logger.xml first.
+network:
+  4000/tcp: SCGI server
+  8442/udp: Cybro controller communication
