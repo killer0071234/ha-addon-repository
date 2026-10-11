@@ -1,7 +1,7 @@
 # Home Assistant Community App: Cybro Scgi Server
 
 Communication gateway between Home Assistant and cybro PLCs.
-Based on CybroScgiServer v3.3.1.
+Based on CybroScgiServer v3.4.0.
 
 ## Installation
 
@@ -148,6 +148,8 @@ Autodetect uses a broadcast in your local network. If no controller is found:
 ## Known issues and limitations
 
 - This app does not support controller connections via can bus.
+- Each controller keeps its own variable list (alc) in memory, which needs about
+  100 kB of RAM per controller.
 
 ## Changelog & Releases
 

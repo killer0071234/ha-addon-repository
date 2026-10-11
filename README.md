@@ -126,10 +126,10 @@ Code template was mainly from [hassio-repo][hassio-repo]
 [cybroedgetoolkit-armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
 [cybroedgetoolkit-armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
 [cybroedgetoolkit-i386-shield]: https://img.shields.io/badge/i386-no-red.svg
-[addon-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.3.2
-[addon-doc-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/blob/v0.3.2/README.md
+[addon-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/tree/v0.4.0
+[addon-doc-cybroscgiserver]: https://github.com/killer0071234/hassio-cybroscgiserver/blob/v0.4.0/README.md
 [cybroscgiserver-issue]: https://github.com/killer0071234/hassio-cybroscgiserver/issues
-[cybroscgiserver-version-shield]: https://img.shields.io/badge/version-v0.3.2-blue.svg
+[cybroscgiserver-version-shield]: https://img.shields.io/badge/version-v0.4.0-blue.svg
 [cybroscgiserver-aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [cybroscgiserver-amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [cybroscgiserver-armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
